@@ -14,12 +14,12 @@ class Word
 		self.name.eql?(other_word.name)
 	end
 
-	def look_up
-		@@words[id]
-	end
-
 	def keep
 		@@words[self.id] = Word.new(self.name, self.id)
+	end
+
+	def self.look_up(id)
+		@@words[id]
 	end
 
 	def self.all
@@ -32,6 +32,7 @@ class Word
 
 	def self.clear
 		@@words = {}
+		@@total_words = 0
 	end
 
 end
