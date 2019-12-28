@@ -15,13 +15,13 @@ describe('.#Word') do
 
 	describe('#==') do
 		it('two words are equal if they have the same attributes')  do
-			other_album = Word.new("Test", nil)
-			expect(@word1 ==  other_album).to(eq(true))
+			other_word = Word.new("Test", nil)
+			expect(@word1 ==  other_word).to(eq(true))
 		end
 	end
 
 	describe('#keep') do
-		it('stores an album in a class variable') do
+		it('stores words in a class variable') do
 			@word1.keep
 			@word2.keep
 			expect(Word.all).to(eq([@word1, @word2]))
