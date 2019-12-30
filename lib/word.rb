@@ -23,7 +23,7 @@ class Word
 	end
 
 	def self.all
-		@@words.values
+		@@words.values56
 	end
 
 	def delete

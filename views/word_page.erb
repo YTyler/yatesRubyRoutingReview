@@ -1,0 +1,11 @@
+<h2><%= @word.name %></h2>
+
+<% if @word.definitions %>
+<ul>
+	<% @word.definitions.each do |definition| %>
+	<% end %>
+	<% else %>
+	<p>No Definitions Submitted</p>
+	<% end %>
+
+	<a href="/dictionary">Return to Dictionary</a>
