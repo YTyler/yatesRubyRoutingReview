@@ -14,6 +14,10 @@ get('/dictionary') do
 	erb(:dictionary)
 end
 
+post('/dictionary') do
+	
+end
+
 get('/dictionary/:id') do
 	@word = Word.look_up(params(:id).to_i)
 	erb(:word_page)
