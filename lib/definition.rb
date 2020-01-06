@@ -16,6 +16,22 @@ class Definition
     (self.text() == other_def.text()) && (self.word_id() == other_def.word_id())
   end
 
+  def self.all
+    @@definitions.values
+  end
+
+  def save
+    @@definitions[self.id] = Definition.new(self.text, self.word_id, self.id)
+  end
+
+  def self.find(id)
+    @@definitions[id]
+  end
+
+  def delete
+    @@definitions.delete(self.id)
+  end
+
   def self.clear()
     @@definitions = {}
     @@total_defs = 0
