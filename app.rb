@@ -34,9 +34,23 @@ get('/dictionary/:id') do
 	erb(:word_page)
 end
 
+# Update Word
+
+# Delete Word
+delete('/dictionary/:id') do
+	word = Word.look_up(params[:id].to_i)
+	word.delete
+	@words = Word.all
+	erb(:dictionary)
+end
+
 post('/dictionary/:id/definitions') do
 	@word = Word.look_up(params[:id].to_i)
 	definition = Definition.new(params[:new_definition], @word.id, nil)
 	definition.save
 	erb(:word_page)
 end
+
+# Update Definition
+
+# Delete Definition
