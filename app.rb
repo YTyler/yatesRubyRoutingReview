@@ -33,3 +33,10 @@ get('/dictionary/:id') do
 	@word = Word.look_up(params[:id].to_i)
 	erb(:word_page)
 end
+
+post('/dictionary/:id/definitions') do
+	@word = Word.look_up(params[:id].to_i)
+	definition = Definition.new(params[:new_definition], @word.id, nil)
+	definition.save
+	erb(:word_page)
+end
