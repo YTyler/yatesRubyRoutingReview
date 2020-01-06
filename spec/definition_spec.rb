@@ -39,4 +39,12 @@ describe('.#Definition') do
     end
   end
 
+  describe('.find_by_word') do
+    it('retrieves the songs of a particular album by its id') do
+      definition = Definition.new("Example Definition", @word.id, nil)
+      definition.save
+      expect(Definition.find_by_word(1)).to(eq([definition]))
+    end
+  end
+
 end
