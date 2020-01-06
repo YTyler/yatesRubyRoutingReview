@@ -3,9 +3,10 @@
 <% if @word.definitions %>
 <ul>
 	<% @word.definitions.each do |definition| %>
+	<li>Definition Here</li>
 	<% end %>
-	<ul>
-	<% else %>
-	<p>No Definitions Submitted</p>
-	<% end %>
-	<a href="/dictionary">Return to Dictionary</a>
+</ul>
+<% else %>
+<p>No Definitions Submitted</p>
+<% end %>
+<a href="/dictionary">Return to Dictionary</a>

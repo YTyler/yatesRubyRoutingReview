@@ -1,7 +1,7 @@
 class Word
 
 	attr_reader :id, :name
-	
+
 	@@words = {}
 	@@total_words = 0;
 
@@ -33,6 +33,10 @@ class Word
 	def self.clear
 		@@words = {}
 		@@total_words = 0
+	end
+
+	def definitions
+		Definition.find_by_word(self.id)
 	end
 
 end
