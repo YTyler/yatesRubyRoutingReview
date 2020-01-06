@@ -1,9 +1,9 @@
 class Word
 
+	attr_reader :id, :name
+	
 	@@words = {}
 	@@total_words = 0;
-
-	attr_reader :id, :name
 
 	def initialize(name, id)
 		@name = name
