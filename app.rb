@@ -15,14 +15,20 @@ get('/dictionary') do
 end
 
 post('/dictionary') do
-	
-end
+	name = params[:word_name]
 
-get('/dictionary/:id') do
-	@word = Word.look_up(params(:id).to_i)
-	erb(:word_page)
+	word = Word.new(name, nil)
+	word.keep
+	@words = Word.all
+
+	erb(:dictionary)
 end
 
 get('/dictionary/new') do
 	erb(:new_word)
+end
+
+get('/dictionary/:id') do
+	@word = Word.look_up(params[:id].to_i)
+	erb(:word_page)
 end
