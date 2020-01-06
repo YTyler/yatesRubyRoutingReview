@@ -27,7 +27,7 @@ _The author can be contacted at tyates907@gmail.com_
 
 ## Technologies Used
 
-* Ruby 2.3.3
+* Ruby 2.5.1
 
 ## Specifications
 
