@@ -54,3 +54,9 @@ end
 # Update Definition
 
 # Delete Definition
+delete('/dictionary/:id/definition/:definition_id') do
+	definition = Definition.find(params[:definition_id].to_i)
+	definition.delete
+	@word = Word.look_up(params[:id].to_i)
+	erb(:word_page)
+end

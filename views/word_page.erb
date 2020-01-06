@@ -4,6 +4,11 @@
 <ul>
 	<% @word.definitions.each do |definition| %>
 	<li><%= definition.text %></li>
+	<form action="/dictionary/<%= @word.id %>/definition/<%= definition.id %>" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<button type="submit">Delete Definition</button>
+	</form>
+
 	<% end %>
 </ul>
 <% else %>
