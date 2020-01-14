@@ -16,6 +16,7 @@ The repository can be found [here](https://github.com/YTyler/yatesRubyRoutingRev
 
 After cloning be sure to run 'bundle install' from the home directory to install the required gems
 
+The site can also be reached through [heroku here](https://obscure-beyond-87214.herokuapp.com/)
 ## Known Bugs
 
 * No known bugs at this time
